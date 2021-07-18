@@ -35,6 +35,6 @@ And last write numbers to multidimensional array seperated by comma. For Example
 Аnd now the program displays the results of the program.
 ____
 
-#License
+##License
 ____
 This programs don't have a license. you can use it everyday:)
