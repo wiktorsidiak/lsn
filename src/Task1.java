@@ -1,23 +1,36 @@
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Task1 {
     public static void main(String[] args) {
-        int[] arr = new int[]{1,10,20,20,2,5};
-        int max = arr[0];
-        int min = arr[0];
-        Set<Integer> distinct = Arrays.stream(arr).boxed().collect(Collectors.toSet());
+        int count;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter number of elements you want in the array: ");
+        count = scan.nextInt();
 
-        for (int i = 0; i <= arr.length - 1 ; i++){
-            if(arr[i] > max){
-                max = arr[i];
+        int[] num = new int[count];
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < count; i++)
+        {
+            num[i] = scan.nextInt();
+        }
+        scan.close();
+
+        int max = num[0];
+        int min = num[0];
+        Set<Integer> distinct = Arrays.stream(num).boxed().collect(Collectors.toSet());
+
+        for (int i = 0; i <= num.length - 1 ; i++){
+            if(num[i] > max){
+                max = num[i];
             }
-            if(min > arr[i]){
-                min = arr[i];
+            if(min > num[i]){
+                min = num[i];
             }
         }
-        System.out.println("count: " + arr.length);
+        System.out.println("count: " + num.length);
         System.out.println("distinct: " + distinct.size());
         System.out.println("min: " + min);
         System.out.println("max: " + max);
