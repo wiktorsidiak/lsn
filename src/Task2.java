@@ -13,7 +13,6 @@ public class Task2 {
             num[i] = scan.nextInt();
         }
         scan.close();
-//         int[] arr = new int[]{1, 2, 10, 7, 5, 3, 6, 6, 13, 0};
 
         for (int i = 0; i <= num.length - 1; i++) {
             for (int j = 1; j <= num.length - 1; j++) {
